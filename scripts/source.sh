@@ -17,8 +17,8 @@ get_library_source() {
     SOURCE_TYPE="TAG"
     ;;
   cpu-features)
-    SOURCE_REPO_URL="https://github.com/arthenica/cpu_features"
-    SOURCE_ID="v0.8.0"
+    SOURCE_REPO_URL="https://github.com/google/cpu_features"
+    SOURCE_ID="v0.10.1"
     SOURCE_TYPE="TAG"
     ;;
   dav1d)
