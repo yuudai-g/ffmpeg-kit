@@ -362,12 +362,11 @@ if [[ -n ${ANDROID_ARCHITECTURES} ]]; then
 
   echo -e -n "\n"
 
-  # DO NOT BUILD ANDROID ARCHIVE
+  # BUILD ANDROID ARCHIVE
   if [[ ${NO_ARCHIVE} -ne 1 ]]; then
 
     echo -e -n "\nCreating Android archive under prebuilt: "
 
-    # BUILD ANDROID ARCHIVE
     rm -f "${BASEDIR}"/android/ffmpeg-kit-android-lib/build/outputs/aar/ffmpeg-kit-release.aar 1>>"${BASEDIR}"/build.log 2>&1
     ./gradlew ffmpeg-kit-android-lib:clean ffmpeg-kit-android-lib:assembleRelease ffmpeg-kit-android-lib:testReleaseUnitTest 1>>"${BASEDIR}"/build.log 2>&1
     if [ $? -ne 0 ]; then
